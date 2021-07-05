@@ -1,0 +1,50 @@
+{
+	"name": "vscode-custom-annotator",
+	"description": "Anotate line using your json file",
+	"version": "0.0.1",
+	"publisher": "ponyopoppo",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"repository": {
+		"url": "https://github.com/ponyopoppo/vscode-custom-annotator"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "custom-annotator.load",
+				"title": "custom-annotator: Load file"
+			},
+			{
+				"command": "custom-annotator.reload",
+				"title": "custom-annotator: Reload"
+			},
+			{
+				"command": "custom-annotator.clear",
+				"title": "custom-annotator: Clear"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint . --ext .ts,.tsx",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.0",
+		"@types/vscode": "^1.32.0",
+		"@typescript-eslint/eslint-plugin": "^4.16.0",
+		"@typescript-eslint/parser": "^4.16.0",
+		"eslint": "^7.21.0",
+		"typescript": "^4.3.2"
+	}
+}
